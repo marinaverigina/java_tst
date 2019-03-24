@@ -5,12 +5,11 @@ public class TestProgram {
         hello("user");
         hello("Marina");
 
-        double v = 10;
-        System.out.println("Площадь квадрата со стороной " + v + " равна " + area(v));
+        Square s = new Square(5);
+        System.out.println("Площадь квадрата со стороной " + s.l + " равна " + area(s));
 
-        double a = 5;
-        double b = 4;
-        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " равна " + area(a,b));
+        Rectangle r = new Rectangle(7,8);
+        System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " равна " + area(r));
 
     }
 
@@ -18,11 +17,11 @@ public class TestProgram {
         System.out.println("Hello, " + s);
     }
 
-    public static double area(double x) {
-        return x * x;
+    public static double area(Square s) {
+        return s.l*s.l;
     }
 
-    public static double area(double a, double b){
-        return a*b;
+    public static double area(Rectangle r){
+        return r.a*r.b;
     }
 }
